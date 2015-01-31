@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+
+<div class="row">
+    <div class="12u">
+
+        <!-- Characters -->
+            <section>
+                <header class="major">
+                    <h2>Characters</h2>
+                </header>
+                <div class="row">
+                {% for character in site.data.characters %}
+                    <div class="4u">
+                        <section class="box">
+                            <span class="image featured"><img src="{{character.image}}" alt="" /></span>
+                            <header>
+                                <h3>{{character.name}}</h3>
+                            </header>
+                            <p>{{character.description}}</p>
+                        </section>
+                    </div>
+                {% endfor %}
+                </div>
+            </section>
+
+    </div>
+</div>
+<div class="row">
+    <div class="12u">
+
+        <!-- Blog -->
+            <section>
+                <header class="major">
+                    <h2>Recent Episodes</h2>
+                </header>
+                <div class="row">
+                {% for post in site.posts limit:2 %}
+                    <div class="6u">
+                        <section class="box">
+                            <a href="{{ post.url | prepend: site.baseurl }}" class="image featured"><img src="{{ post.banner | prepend: site.baseurl }}" alt="" /></a>
+                            <header>
+                                <h3>{{ post.title }}</h3>
+                                <p>Posted {{ post.date | date: "%b %-d, %Y" }}</p>
+                            </header>
+                            <p>{{ post.excerpt }}</p>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="{{ post.url | prepend: site.baseurl }}" class="button icon fa-file-text">Continue Reading</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+                    </div>
+                {% endfor %}
+                </div>
+            </section>
+
+    </div>
+</div>

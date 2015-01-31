@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<!-- Content -->
+<article class="box post">
+    <div class="image featured" style="background-image: url('{{ page.banner | prepend: site.baseurl }}');"></div>
+    <header>
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.shortdesc }}</p>
+    </header>
+    {{ content }}
+</article>
