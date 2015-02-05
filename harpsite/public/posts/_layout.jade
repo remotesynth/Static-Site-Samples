@@ -1,0 +1,18 @@
+!!!
+html(lang="en")
+    != partial("../_partials/head")
+  body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+    != partial("../_partials/header")
+
+    div(id="main-wrapper")
+        div(class="container")
+            //Content
+            article(class="box post")
+                - var imagestyle = "background-image: url('"+banner+"');"
+                div(class="image featured",style=imagestyle)
+                header
+                    h2= title
+                    p= shortdesc
+                !=yield
+
+!= partial("../_partials/footer")

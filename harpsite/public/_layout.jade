@@ -1,0 +1,11 @@
+!!!
+html(lang="en")
+    != partial("_partials/head")
+  body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+    != partial("_partials/header")
+
+    div(id="main-wrapper")
+        div(class="container")
+            != yield
+
+    != partial("_partials/footer")

@@ -1,0 +1,48 @@
+-function prettyMonth(dateString){
+    -var date = new Date(dateString);
+    -var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    -var m = monthNames[date.getMonth()];
+    -return m;
+-}
+
+-function prettyDay(dateString){
+    -var date = new Date(dateString);
+    -var d = date.getDate();
+    -return d;
+-}
+
+//Footer
+div(id="footer-wrapper")
+    section(id="footer",class="container")
+        div(class="row")
+            div(class="8u")
+                section
+                    header
+                        h2 More Episodes
+                    ul(class="dates")
+                        - var i=0
+                        each post, slug in public.posts._data
+                            -i++
+                            if (i>2) && (i<8)
+                                li
+                                    span(class="date")
+                                        !=prettyMonth(post.date)
+                                        strong= prettyDay(post.date)
+                                    h3
+                                        a(href="/posts/" + slug)= post.title
+                                    p= post.shortdesc
+            div(class="4u")
+                section
+                    header
+                        h2 What's this all about?
+                    a(href="#",class="image featured")
+                        img(src= banner)
+                    p= description
+        div(class="row")
+            div(class="12u")
+                //Copyright
+                div(id="copyright")
+                    ul(class="links")
+                        li= "&copy;"+ site_title+ "All rights reserved."
+                        li Design:
+                            a(href="http://html5up.net") HTML5 UP

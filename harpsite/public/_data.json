@@ -1,0 +1,37 @@
+{
+	"rss": {
+		"layout": false
+	},
+    "characters": [
+      {
+        "description": "Finn is a 15-year-old human. He is roughly five feet tall and is missing several teeth due to his habit of biting trees and rocks among other things.",
+        "image": "/assets/images/finn.jpg",
+        "name": "Finn the Human"
+      },
+      {
+        "description": "Jake can morph into all sorts of fantastic shapes with his powers, but typically takes the form of an average sized yellow-orange bulldog.",
+        "image": "/assets/images/jake.jpg",
+        "name": "Jake the Dog"
+      },
+      {
+        "description": "Princess Bubblegum loves (most of) her subjects and defends them tirelessly when trouble brews and is perhaps the most intelligent person in the Land of Ooo.",
+        "image": "/assets/images/bubblegum.jpg",
+        "name": "Princess Bubblegum"
+      },
+      {
+        "description": "Ice King, formerly Simon Petrikov, is a blue-skinned, elderly man with unusually pointy fingers, pointy toes, sharp teeth, and a long, goblin-like nose.",
+        "image": "/assets/images/iceking.jpg",
+        "name": "Ice King"
+      },
+      {
+        "description": "Lumpy Space Princess (LSP) acts like a bratty, apathetic, sassy, attention-seeking and willfully ignorant teenager, often texting on her phone.",
+        "image": "/assets/images/lsp.jpg",
+        "name": "Lumpy Space Princess"
+      },
+      {
+        "description": "Marceline is over a thousand years old. Centuries of wandering the Land of Ooo have made her a fearless daredevil and a a lover of all things exotic.",
+        "image": "/assets/images/marceline.jpg",
+        "name": "Marceline"
+      }
+    ]
+}

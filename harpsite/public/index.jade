@@ -1,0 +1,53 @@
+- function excerpt(content) {
+  - if(content.indexOf("<!--more-->") == -1) return content;
+  - else return content.split("<!--more-->")[0];
+- }
+
+-function prettyDate(dateString){
+    //if it's already a date object and not a string you don't need this line:
+    -var date = new Date(dateString);
+    -var d = date.getDate();
+    -var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    -var m = monthNames[date.getMonth()];
+    -var y = date.getFullYear();
+    -return m+' '+d+' '+y;
+-}
+
+div(class="row")
+    div(class="12u")
+        // Characters
+        section
+            header(class="major")
+                h2 Characters
+            div(class="row")
+                each character in public._data.characters
+                    div(class="4u")
+                        section(class="box")
+                            span(class="image featured")
+                                img(src= character.image)
+                            header
+                                h3= character.name
+                            p= character.description
+
+div(class="row")
+    div(class="12u")
+        section
+            header(class="major")
+                h2 Recent Episodes
+            div(class="row")
+                - var i=0
+                each post, slug in public.posts._data
+                    - i++
+                    if i<3
+                        div(class="6u")
+                            section(class="box")
+                                a(href= "/posts/" + slug, class="image featured")
+                                    img(src= post.banner)
+                                header
+                                    h3= post.title
+                                    p= "Posted " + prettyDate(post.date)
+                                != excerpt(partial("/posts/" + slug,post))
+                                footer
+                                    ul(class="actions")
+                                        li
+                                            a(href= "/posts/" + slug, class="button icon fa-file-text") Continue Reading
