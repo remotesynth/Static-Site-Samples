@@ -8,7 +8,7 @@
                         <h2>More Episodes</h2>
                     </header>
                     <ul class="dates">
-                    <% blog.articles[1...8].each do |article| %>
+                    <% blog.articles[2...8].each do |article| %>
                         <li>
                             <span class="date"><%= article.date.strftime('%b') %> <strong><%= article.date.strftime('%d') %></strong></span>
                             <h3><%= link_to article.title, article %></h3>

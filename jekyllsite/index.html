@@ -12,17 +12,17 @@ layout: default
                     <h2>Characters</h2>
                 </header>
                 <div class="row">
-                <% data.characters.each do |character| %>
+                {% for character in site.data.characters %}
                     <div class="4u">
                         <section class="box">
-                            <span class="image featured"><img src="<%= character.image %>" alt="" /></span>
+                            <span class="image featured"><img src="{{character.image}}" alt="" /></span>
                             <header>
-                                <h3><%= character.name %></h3>
+                                <h3>{{character.name}}</h3>
                             </header>
-                            <p><%= character.description %></p>
+                            <p>{{character.description}}</p>
                         </section>
                     </div>
-                <% end %>
+                {% endfor %}
                 </div>
             </section>
 
