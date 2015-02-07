@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  <%= partial "partials/head" %>
+
+  <body>
+
+    <%= partial "partials/header" %>
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+        <%= yield %>
+        </div>
+    </div>
+
+    <%= partial "partials/footer" %>
+
+  </body>
+
+</html>

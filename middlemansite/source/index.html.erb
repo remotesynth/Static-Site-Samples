@@ -1,8 +1,3 @@
----
-layout: default
----
-
-
 <div class="row">
     <div class="12u">
 
@@ -37,23 +32,23 @@ layout: default
                     <h2>Recent Episodes</h2>
                 </header>
                 <div class="row">
-                {% for post in site.posts limit:2 %}
+                <% blog.articles[0...2].each do |article| %>
                     <div class="6u">
                         <section class="box">
-                            <a href="{{ post.url | prepend: site.baseurl }}" class="image featured"><img src="{{ post.banner | prepend: site.baseurl }}" alt="" /></a>
+                            <a href="<%= article.url %>" class="image featured"><img src="<%= article.data[:banner] %>" alt="" /></a>
                             <header>
-                                <h3>{{ post.title }}</h3>
-                                <p>Posted {{ post.date | date: "%b %-d, %Y" }}</p>
+                                <h3><%= article.title %></h3>
+                                <p>Posted <%= article.date.strftime('%b %-d, %Y') %></p>
                             </header>
-                            <p>{{ post.excerpt }}</p>
+                            <p><%= article.summary %></p>
                             <footer>
                                 <ul class="actions">
-                                    <li><a href="{{ post.url | prepend: site.baseurl }}" class="button icon fa-file-text">Continue Reading</a></li>
+                                    <li><a href="<%= article.url %>" class="button icon fa-file-text">Continue Reading</a></li>
                                 </ul>
                             </footer>
                         </section>
                     </div>
-                {% endfor %}
+                <% end %>
                 </div>
             </section>
 

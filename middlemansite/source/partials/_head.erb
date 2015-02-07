@@ -1,0 +1,11 @@
+<head>
+    <title><%= site_title ' - ' + current_article.title unless current_article.nil? %></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+    <meta name="keywords" content="adventure time,cartoon network,cartoons,finn,jake,princess bubblegum" />
+    
+    <%= javascript_include_tag  "jquery.min", "skel.min", "skel-layers.min", "init"  %>
+    <%= stylesheet_link_tag "skel", "style", "style-desktop" %>
+    
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+</head>

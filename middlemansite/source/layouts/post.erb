@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <%= partial "partials/head" %>
+
+  <body>
+
+    <%= partial "partials/header" %>
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <!-- Content -->
+            <article class="box post">
+                <div class="image featured" style="background-image: url('<%= current_article.data[:banner] %>');"></div>
+                <header>
+                    <h2><%= current_article.title %></h2>
+                    <p><%= current_article.data[:shortdesc] %></p>
+                </header>
+                <%= yield %>
+            </article>
+        </div>
+    </div>
+
+    <%= partial "partials/footer" %>
+
+  </body>
+
+</html>

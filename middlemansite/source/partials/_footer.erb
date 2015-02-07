@@ -1,0 +1,44 @@
+<!-- Footer -->
+<div id="footer-wrapper">
+    <section id="footer" class="container">
+        <div class="row">
+            <div class="8u">
+                <section>
+                    <header>
+                        <h2>More Episodes</h2>
+                    </header>
+                    <ul class="dates">
+                    <% blog.articles[1...8].each do |article| %>
+                        <li>
+                            <span class="date"><%= article.date.strftime('%b') %> <strong><%= article.date.strftime('%d') %></strong></span>
+                            <h3><%= link_to article.title, article %></h3>
+                            <p><%= article.data[:shortdesc] %></p>
+                        </li>
+                    <% end %>
+                    </ul>
+                </section>
+            </div>
+            <div class="4u">
+                <section>
+                    <header>
+                        <h2>What's this all about?</h2>
+                    </header>
+                    <a href="#" class="image featured"><img src="<%= banner %>" alt="" /></a>
+                    <p><%= description %></p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="links">
+                            <li>&copy; <%= site_title %>. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+</div>
