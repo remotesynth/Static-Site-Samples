@@ -1,0 +1,44 @@
+{
+    "season-6-food-chain": {
+        "title": "Food Chain (Season 6)",
+        "date": "2014-06-12",
+        "banner": "/assets/images/foodchain.jpg",
+        "shortdesc": "Finn and Jake learn about the food chain by becoming the food chain."
+    },
+    "season-6-breezy": {
+        "title": "Breezy (Season 6)",
+        "date": "2014-06-05",
+        "banner": "/assets/images/breezy.jpg",
+        "shortdesc": "Finn decides to get back into the dating game to help his wilting arm flower."
+    },
+    "season-6-sad-face": {
+        "title": "Sad Face (Season 6)",
+        "date": "2014-05-12",
+        "banner": "/assets/images/sadface.jpg",
+        "shortdesc": "While Jake is asleep, his tail goes to work as a clown in a traveling bug circus."
+    },
+    "season-6-the-tower": {
+        "title": "The Tower (Season 6)",
+        "date": "2014-05-05",
+        "banner": "/assets/images/thetower.jpg",
+        "shortdesc": "Finn is not happy with his replacement arm."
+    },
+    "season-6-james-ii": {
+        "title": "James II (Season 6)",
+        "date": "2014-04-28",
+        "banner": "/assets/images/jamesii.jpg",
+        "shortdesc": "Finn and Jake discover that Clone James has been faking his own death."
+    },
+    "season-6-wake-up": {
+        "title": "Wake Up (Season 6)",
+        "date": "2014-04-21",
+        "banner": "/assets/images/wakeup.jpg",
+        "shortdesc": "Prismo helps Finn and Jake access the Crystal Citadel to meet Finn's father."
+    },
+    "season-6-escape-the-citadel": {
+        "title": "Escape from the Citadel (Season 6)",
+        "date":   "2014-04-21 10:33:56",
+        "banner": "/assets/images/citadel.jpg",
+        "shortdesc": "Finn and Jake follow the Lich to the Citadel, where Finn meets his long lost dad."
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <%- partial("../_partials/head") %>
+
+  <body>
+
+    <%- partial("../_partials/header") %>
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <!--Content-->
+            <article class="box post">
+                <div class="image featured" style="background-image: url('<%- banner %>')"></div>
+                <header>
+                    <h2><%- title %></h2>
+                    <p><%- shortdesc %></p>
+                </header>
+                <%- yield %>
+            </article>
+        </div>
+    </div>
+
+    <%- partial("../_partials/footer") %>
+
+  </body>
+
+</html>

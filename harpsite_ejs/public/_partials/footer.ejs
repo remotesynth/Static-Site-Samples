@@ -1,0 +1,64 @@
+<%
+function prettyMonth(dateString){
+    var date = new Date(dateString);
+    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    var m = monthNames[date.getMonth()];
+    return m;
+}
+
+function prettyDay(dateString){
+    var date = new Date(dateString);
+    var d = date.getDate();
+    return d;
+} %>
+
+<!-- Footer -->
+<div id="footer-wrapper">
+    <section id="footer" class="container">
+        <div class="row">
+            <div class="8u">
+                <section>
+                    <header>
+                        <h2>More Episodes</h2>
+                    </header>
+                    <ul class="dates">
+                    <% 
+                    var i = 0;
+                    for(var slug in public.posts._data){
+                        i++;
+                        if (i >=3) {
+                    %>
+                        <li>
+                            <span class="date"><%- prettyMonth(public.posts._data[slug].date) %> <strong><%- prettyDay(public.posts._data[slug].date) %></strong></span>
+                            <h3><a href="/posts/<%- slug %>"><%- public.posts._data[slug].title %></a></h3>
+                            <p><%- public.posts._data[slug].shortdesc %></p>
+                        </li>
+                    <%  }
+                    }; %>
+                    </ul>
+                </section>
+            </div>
+            <div class="4u">
+                <section>
+                    <header>
+                        <h2>What's this all about?</h2>
+                    </header>
+                    <a href="#" class="image featured"><img src="<%- banner %>" alt="" /></a>
+                    <p><%- description %></p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="links">
+                            <li>&copy; <%= site_title %>. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+</div>
