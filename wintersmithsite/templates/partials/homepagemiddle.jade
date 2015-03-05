@@ -1,0 +1,39 @@
+div(class="row")
+    div(class="12u")
+        // Characters
+        section
+            header(class="major")
+                h2 Characters
+            div(class="row")
+                each character in contents.characters
+                    div(class="4u")
+                        section(class="box")
+                            span(class="image featured")
+                                img(src= character.metadata.image)
+                            header
+                                h3= character.metadata.name
+                            p= character.metadata.description
+
+div(class="row")
+    div(class="12u")
+        section
+            header(class="major")
+                h2 Recent Episodes
+            div(class="row")
+                - var i=0
+                - var articles = env.helpers.getArticles(contents);
+                each article in articles
+                    - i++
+                    if i<3
+                        div(class="6u")
+                            section(class="box")
+                                a(href= article.url, class="image featured")
+                                    img(src= article.metadata.banner)
+                                header
+                                    h3= article.title
+                                    p= "Posted " + moment.utc(article.date).format('MMM DD, YYYY')
+                                | !{ typogr(article.intro).typogrify() }
+                                footer
+                                    ul(class="actions")
+                                        li
+                                            a(href= article.url, class="button icon fa-file-text") Continue Reading
