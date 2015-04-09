@@ -80,3 +80,8 @@ To run the project on a local server, simply change directory and start a previe
     wintersmith preview
 
 Wintersmith comes bundled with Jade templating support. The data uses JSON.
+
+For a detailed walkthrough covering how the Wintersmith example site was built and check out the two part series on Sitepoint:
+
+* [Getting Started with Wintersmith: A Node.js-based Static Site Generator](http://www.sitepoint.com/getting-started-wintersmith-nodejs-static-site-generator/)
+* [Creating Posts, Custom Metadata, and Data in Wintersmith](http://www.sitepoint.com/creating-posts-custom-metadata-data-wintersmith/)
