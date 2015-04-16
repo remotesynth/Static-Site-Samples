@@ -98,4 +98,4 @@ To run the project on a local server, simply change directory and start a previe
     npm install
     hexo server
 
-Wintersmith comes bundled with both EJS and Swig templating support (the generated starter uses EJS, so this was chosen). The data uses YAML.
+Hexo comes bundled with both EJS and Swig templating support (the generated starter uses EJS, so this was chosen). The data uses YAML.
