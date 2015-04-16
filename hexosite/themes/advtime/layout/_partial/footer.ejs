@@ -1,0 +1,47 @@
+<!-- Footer -->
+<div id="footer-wrapper">
+    <section id="footer" class="container">
+        <div class="row">
+            <div class="8u">
+                <section>
+                    <header>
+                        <h2>More Episodes</h2>
+                    </header>
+                    <ul class="dates">
+                    <% site.posts.each(function(post, i){
+                    if (i >= 2) {
+                    %>
+                        <li>
+                            <span class="date"><%- date(post.date, "MMM") %> <strong><%- date(post.date, "D") %></strong></span>
+                            <h3><a href="/posts/<%- url_for(post.path) %>"><%- post.title %></a></h3>
+                            <p><%- post.shortdesc %></p>
+                        </li>
+                    <%  }
+                    }); %>
+                    </ul>
+                </section>
+            </div>
+            <div class="4u">
+                <section>
+                    <header>
+                        <h2>What's this all about?</h2>
+                    </header>
+                    <a href="#" class="image featured"><img src="<%- config.banner %>" alt="" /></a>
+                    <p><%- config.description %></p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+
+                <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="links">
+                            <li>&copy; <%= config.title %>. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+</div>

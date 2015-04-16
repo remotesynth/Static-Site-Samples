@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="12u">
+
+        <!-- Characters -->
+            <section>
+                <header class="major">
+                    <h2>Characters</h2>
+                </header>
+                <div class="row">
+                <% for (character in site.data.characters) { %>
+                    <div class="4u">
+                        <section class="box">
+                            <span class="image featured"><img src="<%- site.data.characters[character].image %>" alt="" /></span>
+                            <header>
+                                <h3><%- site.data.characters[character].name %></h3>
+                            </header>
+                            <p><%- site.data.characters[character].description %></p>
+                        </section>
+                    </div>
+                <% } %>
+                </div>
+            </section>
+
+    </div>
+</div>
+<div class="row">
+    <div class="12u">
+
+        <!-- Blog -->
+            <section>
+                <header class="major">
+                    <h2>Recent Episodes</h2>
+                </header>
+                <div class="row">
+                <% page.posts.each(function(post, i){
+                    if (i < 2) {
+                %>
+                    <div class="6u">
+                        <section class="box">
+                            <a href="<%- url_for(post.path) %>" class="image featured"><img src="<%- post.banner %>" alt="" /></a>
+                            <header>
+                                <h3><%- post.title %></h3>
+                                <p>Posted <%- date(post.date, "MMM DD, YYYY") %></p>
+                            </header>
+                            <p><%- post.excerpt %></p>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="<%- url_for(post.path) %>" class="button icon fa-file-text">Continue Reading</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+                    </div>
+                <% }
+                }); %>
+                </div>
+            </section>
+
+    </div>
+</div>

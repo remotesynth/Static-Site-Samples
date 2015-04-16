@@ -85,3 +85,17 @@ For a detailed walkthrough covering how the Wintersmith example site was built a
 
 * [Getting Started with Wintersmith: A Node.js-based Static Site Generator](http://www.sitepoint.com/getting-started-wintersmith-nodejs-static-site-generator/)
 * [Creating Posts, Custom Metadata, and Data in Wintersmith](http://www.sitepoint.com/creating-posts-custom-metadata-data-wintersmith/)
+
+##Hexo Example
+
+Hexo is also available via npm (again the `sudo` is not necessary on Windows):
+
+    sudo npm install hexo-cli -g
+
+To run the project on a local server, simply change directory and start a preview:
+
+    cd hexosite
+    npm install
+    hexo server
+
+Wintersmith comes bundled with both EJS and Swig templating support (the generated starter uses EJS, so this was chosen). The data uses YAML.
