@@ -99,3 +99,16 @@ To run the project on a local server, simply change directory and start a previe
     hexo server
 
 Hexo comes bundled with both EJS and Swig templating support (the generated starter uses EJS, so this was chosen). The data uses YAML.
+
+##Hugo Example
+
+Hugo is built with the Go programming language. There are a number of OS-specific [installable downloads](https://github.com/spf13/hugo/releases) or, if you are on OSX, you can install Hugo via [Brew](http://brew.sh/):
+
+    brew install hugo
+
+To run the example, change directory and start a local server preview:
+
+    cd hugosite
+    hugo server
+
+Hugo templates are built with the Go html/template library. Data files are TOML.
