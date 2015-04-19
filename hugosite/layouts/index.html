@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    {{ partial "header.html" . }}
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Characters -->
+                        <section>
+                            <header class="major">
+                                <h2>Characters</h2>
+                            </header>
+                            <div class="row">
+                            {{ range $.Site.Data.characters.characters }}
+                                <div class="4u">
+                                    <section class="box">
+                                        <span class="image featured"><img src="{{ .Site.BaseUrl }}{{.image}}" alt="" /></span>
+                                        <header>
+                                            <h3>{{.name}}</h3>
+                                        </header>
+                                        <p>{{.description}}</p>
+                                    </section>
+                                </div>
+                            {{ end }}
+                            </div>
+                        </section>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Blog -->
+                        <section>
+                            <header class="major">
+                                <h2>Recent Episodes</h2>
+                            </header>
+                            <div class="row">
+                            {{ range first 2 .Site.Pages }}
+                                <div class="6u">
+                                    <section class="box">
+                                        <a href="{{ .Permalink }}" class="image featured"><img src="{{ .Site.BaseUrl }}{{ .Params.banner }}" alt="" /></a>
+                                        <header>
+                                            <h3>{{ .Title }}</h3>
+                                            <p>Posted {{ .Date.Format "Jan 2,2006" }}</p>
+                                        </header>
+                                        <p>{{ .Summary }}</p>
+                                        <footer>
+                                            <ul class="actions">
+                                                <li><a href="{{ .Permalink }}" class="button icon fa-file-text">Continue Reading</a></li>
+                                            </ul>
+                                        </footer>
+                                    </section>
+                                </div>
+                            {{ end }}
+                            </div>
+                        </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+
+  </body>
+
+</html>
