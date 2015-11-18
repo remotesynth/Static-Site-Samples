@@ -1,0 +1,39 @@
+div(class="row")
+    div(class="12u")
+        // Characters
+        section
+            header(class="major")
+                h2 Characters
+            div(class="row")
+                each character in collections.characters
+                    div(class="4u")
+                        section(class="box")
+                            span(class="image featured")
+                                img(src= character.json.image)
+                            header
+                                h3= character.json.name
+                            p= character.json.description
+
+div(class="row")
+    div(class="12u")
+        section
+            header(class="major")
+                h2 Recent Episodes
+            div(class="row")
+                - var i=0
+                - var articles = collections.articles;
+                each article in articles
+                    - i++
+                    if i<3
+                        div(class="6u")
+                            section(class="box")
+                                a(href= article.path, class="image featured")
+                                    img(src= article.banner)
+                                header
+                                    h3= article.title
+                                    p= "Posted " + moment.utc(article.date).format('MMM DD, YYYY')
+                                | !{ typogr(article.snippet).typogrify() }
+                                footer
+                                    ul(class="actions")
+                                        li
+                                            a(href= article.path, class="button icon fa-file-text") Continue Reading

@@ -1,0 +1,8 @@
+env:
+  node: true
+rules:
+  indent: [2, 2]
+  linebreak-style: 2
+  no-irregular-whitespace: 2
+  no-trailing-spaces: 2
+  quotes: [2, "single", "avoid-escape"]

@@ -1,0 +1,36 @@
+//Footer
+div(id="footer-wrapper")
+    section(id="footer",class="container")
+        div(class="row")
+            div(class="8u")
+                section
+                    header
+                        h2 More Episodes
+                    ul(class="dates")
+                        - var i=0
+                        - var articles = collections.articles;
+                        each article in articles
+                            -i++
+                            if (i>2) && (i<8)
+                                li
+                                    span(class="date")
+                                        !=moment.utc(article.date).format('MMM')
+                                        strong= moment.utc(article.date).format('DD')
+                                    h3
+                                        a(href=article.path)= article.title
+                                    p= article.shortdesc
+            div(class="4u")
+                section
+                    header
+                        h2 What's this all about?
+                    a(href="#",class="image featured")
+                        img(src= site.banner)
+                    p= site.description
+        div(class="row")
+            div(class="12u")
+                //Copyright
+                div(id="copyright")
+                    ul(class="links")
+                        li!= "&copy; " + site.title + " All rights reserved."
+                        li Design: 
+                            a(href="http://html5up.net") HTML5 UP
