@@ -1,10 +1,11 @@
 #
-# Build: docker build -t craigbarrau/jekyll-sample
-# Run:   docker run -t -v jekyllsite:/srv/jekyll craigbarrau/jekyll-sample
+# Build: docker build -t craigbarrau/jekyll-adventuretime .
+# Run:   docker run -d -p 14000:4000 craigbarrau/jekyll-adventuretime
 #
 FROM ruby:2.2.3
 
 RUN gem install jekyll
+ADD . /srv/jekyll
 WORKDIR /srv/jekyll
 ENTRYPOINT jekyll serve --host 0.0.0.0
 EXPOSE 4000
