@@ -3,6 +3,7 @@
 # Run:   docker run -d -p 14000:4000 jekyll-adventuretime
 #
 FROM ruby:2.2.3
+MAINTAINER cbarr.aus@gmail.com
 
 RUN gem install jekyll
 ADD . /srv/jekyll
