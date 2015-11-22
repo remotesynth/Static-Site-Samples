@@ -1,6 +1,6 @@
 #
-# Build: docker build -t craigbarrau/middleman-adventuretime .
-# Run:   docker run -d -p 14567:4567 craigbarrau/middleman-adventuretime
+# Build: docker build -t middleman-adventuretime .
+# Run:   docker run -d -p 14567:4567 middleman-adventuretime
 #
 FROM ruby:2.2.3
 

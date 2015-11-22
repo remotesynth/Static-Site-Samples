@@ -1,6 +1,6 @@
 #
-# Build: docker build -t craigbarrau/harp-ejs-adventuretime .
-# Run:   docker run -d -p 19000:9000 craigbarrau/harp-ejs-adventuretime
+# Build: docker build -t harp-ejs-adventuretime .
+# Run:   docker run -d -p 19000:9000 harp-ejs-adventuretime
 #
 FROM node:5.0.0-slim
 

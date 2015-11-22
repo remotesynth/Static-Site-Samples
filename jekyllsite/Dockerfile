@@ -1,6 +1,6 @@
 #
-# Build: docker build -t craigbarrau/jekyll-adventuretime .
-# Run:   docker run -d -p 14000:4000 craigbarrau/jekyll-adventuretime
+# Build: docker build -t jekyll-adventuretime .
+# Run:   docker run -d -p 14000:4000 jekyll-adventuretime
 #
 FROM ruby:2.2.3
 

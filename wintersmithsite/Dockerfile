@@ -1,6 +1,6 @@
 #
 # Build: docker build -t wintersmith-adventuretime .
-# Run:   docker run -d -p 18080:8080 wintersmith-adventuretime
+# Run:   docker run -d -p 28080:8080 wintersmith-adventuretime
 #
 FROM node:5.0.0-slim
 
