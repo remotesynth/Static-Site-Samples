@@ -13,7 +13,7 @@
                         {{ if gt $index 1 }}
                         <li>
                             <span class="date">{{ .Date.Format "Jan" }}<strong>{{ .Date.Format "2"}}</strong></span>
-                            <h3><a href="link">{{ .Title }}</a></h3>
+                            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                             <p>{{.Description}}</p>
                         </li>
                         {{ end }}
