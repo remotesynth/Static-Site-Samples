@@ -22,7 +22,7 @@
                             {{ range $.Site.Data.characters.characters }}
                                 <div class="4u">
                                     <section class="box">
-                                        <span class="image featured"><img src="{{ .Site.BaseUrl }}{{.image}}" alt="" /></span>
+                                        <span class="image featured"><img src="{{ .Site.BaseURL }}{{.image}}" alt="" /></span>
                                         <header>
                                             <h3>{{.name}}</h3>
                                         </header>
@@ -47,7 +47,7 @@
                             {{ range first 2 .Site.Pages }}
                                 <div class="6u">
                                     <section class="box">
-                                        <a href="{{ .Permalink }}" class="image featured"><img src="{{ .Site.BaseUrl }}{{ .Params.banner }}" alt="" /></a>
+                                        <a href="{{ .Permalink }}" class="image featured"><img src="{{ .Site.BaseURL }}{{ .Params.banner }}" alt="" /></a>
                                         <header>
                                             <h3>{{ .Title }}</h3>
                                             <p>Posted {{ .Date.Format "Jan 2,2006" }}</p>
