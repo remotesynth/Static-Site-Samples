@@ -13,9 +13,17 @@ CONTAINER_SUFFIX="-adventuretime"
 
 # TODO Get Hexo and Hugo working and then add them to the list of available sites
 
+banner(){
+RED='\033[0;31m'
+GRAY='\033[1;30m'
+YELLOW='\033[1;33m'
+ORANGE='\033[0;33m'
+NC='\033[0m' # No Color
+echo -e "${RED}A D V E N T U R E\n   ${YELLOW}o${ORANGE}=|${GRAY}=${RED}T${GRAY}==${RED}I${GRAY}==${RED}M${GRAY}==${RED}E${GRAY}>${NC}\n"
+}
+
 usage() {
 cat << EOF
-
 This is a utility to run the Adventure Time static site examples
 from https://github.com/remotesynth/Static-Site-Samples
 without needing to install anything locally (except Docker, of course).
@@ -31,14 +39,20 @@ Available sites:
   middleman
   wintersmith
 
-Or run them all simultaneously with docker-compose
+Or run them all simultaneously
 
   $0 -a
+
+You can destroy a previously created site with
+  $0 <site> destroy
+or destroy all with:
+  $0 -a destroy
 
 EOF
 exit 0
 }
 
+banner
 if [ "$#" -eq 0 ]; then usage; exit;  fi
 
 # Validate Docker is installed and the user has permissions to run it
