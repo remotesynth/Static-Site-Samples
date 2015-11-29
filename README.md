@@ -53,11 +53,11 @@ If you need to install Docker, on most Linux operating systems you can install b
 For more detailed instructions visit https://docs.docker.com/engine/installation/
 
 To see the usage of the tool simply run  
-`sudo ./adventure-time.sh`
+`./adventure-time.sh`
 
 To use Docker to boot a static site run  
 `sudo ./adventure-time.sh <site>`  
-For example, to run Jekyll Adventure Time sample run this:  
+For example, to run Jekyll Adventure Time example run this:  
 `sudo ./adventure-time.sh jekyll`
 
 Or if you want to boot all the static sites at the same time you can run this:  
