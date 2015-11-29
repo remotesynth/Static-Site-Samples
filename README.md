@@ -35,8 +35,7 @@ The "ratings" in the presentation represent my own personal opinion. Given the s
 
 ## Quickstart Instructions
 
-If you want to save yourself time by using containers to run the examples, there is a simple `adventure-time.sh` utility.
-This is a great approach if you want to try out each technology without having to have anything installed on your target host (other than Docker, of course). Alternatively, you can follow the steps for installing each technology individually 
+If you want to save yourself time by using containers to run the examples, there is a simple `adventure-time.sh` utility that simplifies the interaction with Docker. No Docker knowledge is required. This is a great approach if you want to try out each technology without having to have anything installed on your target host (other than Docker, of course). Alternatively, you can build from scratching using the individual Dockerfiles or follow the steps for installing each technology manually 
   * [Jekyll Example](#jekyll-example)
   * [Middleman Example](#middleman-example)
   * [Harp Example](#harp-examples)
@@ -44,9 +43,11 @@ This is a great approach if you want to try out each technology without having t
   * [Hexo Example](#hexo-example)
   * [Hugo Example](#hugo-example)
 
-The `./adventure-time.sh` utility can be used to:
-1. Boot one or more of the Adeventure Time static site samples.
-2. Mount the static site source from the target host. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This feature is enabled by the Docker volume mapping feature and auto-reload capability of the respective static site software. All of this magic is simply encapsulated in the `Dockerfile`s and `adventure-time.sh`.
+The `./adventure-time.sh` utility can be used to boot one or more of the Adeventure Time static site samples immediately. The tool will:
+
+1. Use Docker to automatically download and customise the necessary container images.
+2. Use Docker to maps the static site source from the target host to the container guest. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This is achieved by the Docker host to guest volume mapping feature and auto-reload capability of the respective static site software. All of this magic is simply encapsulated in the `Dockerfile`s and `adventure-time.sh`.  
+Note: If you need to install docker on most Linux operating systems you can simply run `curl -sSL https://get.docker.com/ | sh`. For more detailed instructions visit https://docs.docker.com/engine/installation/
 
 To see the usage simply run  
 `sudo ./adventure-time.sh`
