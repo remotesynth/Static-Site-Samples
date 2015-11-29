@@ -47,7 +47,10 @@ The `./adventure-time.sh` utility can be used to boot one or more of the Adevent
 
 1. Use Docker to automatically download and customise the necessary container images.
 2. Use Docker to maps the static site source from the target host to the container guest. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This is achieved by the Docker host to guest volume mapping feature and auto-reload capability of the respective static site software. All of this magic is simply encapsulated in the `Dockerfile`s and `adventure-time.sh`.  
-Note: If you need to install docker on most Linux operating systems you can simply run `curl -sSL https://get.docker.com/ | sh`. For more detailed instructions visit https://docs.docker.com/engine/installation/
+
+If you need to install Docker, on most Linux operating systems you can install by simply running the following as root
+`curl -sSL https://get.docker.com/ | sh`
+For more detailed instructions visit https://docs.docker.com/engine/installation/
 
 To see the usage simply run  
 `sudo ./adventure-time.sh`
@@ -61,7 +64,9 @@ For example, to run Jekyll Adventure Time sample run this:
 Or if you want to boot all the static sites at the same time you can run this:  
 `sudo ./adventure-time.sh -a`
 
-By defaults the static sites listen on the following ports  
+![screencast](screencast.gif)
+
+By default the static sites listen on the following ports  
 
 | Site | Link |
 | ------------- | ------------- | 
