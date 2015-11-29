@@ -46,18 +46,17 @@ If you want to save yourself time by using containers to run the examples, there
 The `./adventure-time.sh` utility can be used to boot one or more of the Adeventure Time static site samples immediately. The tool will:
 
 1. Use Docker to automatically download and customise the necessary container images.
-2. Use Docker to maps the static site source from the target host to the container guest. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This is achieved by the Docker host to guest volume mapping feature and auto-reload capability of the respective static site software. All of this magic is simply encapsulated in the `Dockerfile`s and `adventure-time.sh`.  
+2. Use Docker to map the static site source from the target host to the container guest. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This is achieved by the Docker host to guest volume mapping feature and auto-reload capability of the respective static site technologies.
 
-If you need to install Docker, on most Linux operating systems you can install by simply running the following as root
+If you need to install Docker, on most Linux operating systems you can install by simply running the following as a privileged user
 `curl -sSL https://get.docker.com/ | sh`
 For more detailed instructions visit https://docs.docker.com/engine/installation/
 
-To see the usage simply run  
+To see the usage of the tool simply run  
 `sudo ./adventure-time.sh`
 
 To use Docker to boot a static site run  
-`sudo ./adventure-time.sh <site>`
-
+`sudo ./adventure-time.sh <site>`  
 For example, to run Jekyll Adventure Time sample run this:  
 `sudo ./adventure-time.sh jekyll`
 
@@ -76,7 +75,7 @@ By default the static sites listen on the following ports
 | Harp EJS | http://localhost:29000 |
 | Wintersmith | http://localhost:28080 |
 
-If you want to run without sudo, simply add the current user to the docker group on your operating system. 
+If you want to run `adventure-time.sh` without sudo, simply add the current user to the docker group on your operating system. 
 
 ##Jekyll Example
 
