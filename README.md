@@ -23,7 +23,7 @@ In order to make "fair" comparisons, all of the examples are (initially) built u
 
 The "ratings" in the presentation represent my own personal opinion. Given the stylistic differences between each project, your opinion may differ greatly. For example, those comfortable with Ruby may feel that Middleman is quite easy to use (however, I am not a Ruby developer).
 
-## Quickstart instructions
+## Quick Start Instructions
 
 If you want to save yourself time by using containers to run the examples, there is a simple `adventure-time.sh` utility.
 One of the benefits of this approach is that you don't need to have any of the static site software installed on your target host.
@@ -33,19 +33,19 @@ The utility can be used to:
 1. Boot one or more of the Adeventure Time static site samples.
 2. Mount the static site source from the target host. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This feature is enabled by the Docker volume mapping feature and auto-reload capability of the respective static site software. All of this magic is simply encapsulated in the `Dockerfile`s and `adventure-time.sh`.
 
-To see the usage simply run
+To see the usage simply run  
 `sudo ./adventure-time.sh`
 
-To use Docker to boot a static site run
+To use Docker to boot a static site run  
 `sudo ./adventure-time.sh <site>`
 
-For example, to run Jekyll Adventure Time sample run this:
+For example, to run Jekyll Adventure Time sample run this:  
 `sudo ./adventure-time.sh jekyll`
 
-Or if you want to boot all the static sites at the same time you can run this:
+Or if you want to boot all the static sites at the same time you can run this:  
 `sudo ./adventure-time.sh -a`
 
-By defaults the static sites listen on the following ports
+By defaults the static sites listen on the following ports  
 | *Static Site Generation Technology* | *Link* |
 | ------------- | ------------- | 
 | Jekyll | http://localhost:14000 |
@@ -54,7 +54,7 @@ By defaults the static sites listen on the following ports
 | Harp EJS | http://localhost:29000 |
 | Wintersmith | http://localhost:28080 |
 
-If you want to run without sudo. Simply add the current user to the docker group. 
+If you want to run without sudo, simply add the current user to the docker group on your operating system. 
 
 ##Jekyll Example
 
