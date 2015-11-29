@@ -1,5 +1,15 @@
 # Static Site Samples
 
+  * [Assumptions](#jekyll-example)
+  * [Quickstart Instructions](#quickstart-instructions)
+  * Examples
+    * [Jekyll](#jekyll-example)
+    * [Middleman](#middleman-example)
+    * [Harp](#harp-examples)
+    * [Wintersmith](#wintersmith-example)
+    * [Hexo](#hexo-example)
+    * [Hugo](#hugo-example)
+
 This is a simple example site built using various static site generators to explore the differences between the multitude of available static site options.
 
 The initial samples are [Jekyll](http://jekyllrb.com/), [HarpJS](http://harpjs.com/), [Middleman](https://middlemanapp.com/), [Wintersmith](http://wintersmith.io/), [Hexo](http://hexo.io/) and [Hugo](http://gohugo.io/). More to come.
@@ -23,13 +33,18 @@ In order to make "fair" comparisons, all of the examples are (initially) built u
 
 The "ratings" in the presentation represent my own personal opinion. Given the stylistic differences between each project, your opinion may differ greatly. For example, those comfortable with Ruby may feel that Middleman is quite easy to use (however, I am not a Ruby developer).
 
-## Quick Start Instructions
+## Quickstart Instructions
 
 If you want to save yourself time by using containers to run the examples, there is a simple `adventure-time.sh` utility.
-One of the benefits of this approach is that you don't need to have any of the static site software installed on your target host.
-All that you need is to have Docker installed and have permissions to run Docker.
+This is a great approach if you want to try out each technology without having to have anything installed on your target host (other than Docker, of course). Alternatively, you can follow the steps for installing each technology individually 
+  * [Jekyll Example](#jekyll-example)
+  * [Middleman Example](#middleman-example)
+  * [Harp Example](#harp-examples)
+  * [Wintersmith Example](#wintersmith-example)
+  * [Hexo Example](#hexo-example)
+  * [Hugo Example](#hugo-example)
 
-The utility can be used to:
+The `./adventure-time.sh` utility can be used to:
 1. Boot one or more of the Adeventure Time static site samples.
 2. Mount the static site source from the target host. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This feature is enabled by the Docker volume mapping feature and auto-reload capability of the respective static site software. All of this magic is simply encapsulated in the `Dockerfile`s and `adventure-time.sh`.
 
@@ -47,7 +62,7 @@ Or if you want to boot all the static sites at the same time you can run this:
 
 By defaults the static sites listen on the following ports  
 
-| *Static Site Generation Technology* | *Link* |
+| Site | Link |
 | ------------- | ------------- | 
 | Jekyll | http://localhost:14000 |
 | Middleman | http://localhost:14567 |
