@@ -46,6 +46,7 @@ Or if you want to boot all the static sites at the same time you can run this:
 `sudo ./adventure-time.sh -a`
 
 By defaults the static sites listen on the following ports  
+
 | *Static Site Generation Technology* | *Link* |
 | ------------- | ------------- | 
 | Jekyll | http://localhost:14000 |
