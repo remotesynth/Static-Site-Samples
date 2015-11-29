@@ -99,7 +99,7 @@ runHarp() {
    harp$CONTAINER_SUFFIX
 }
 runHarpMsg() { 
-  echo "Harp EJS    : http://localhost:$HARP_PORT"
+  echo "Harp        : http://localhost:$HARP_PORT"
 }
 
 runHarpEjs() {
