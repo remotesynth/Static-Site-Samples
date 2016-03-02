@@ -3,9 +3,10 @@
     <div id="header">
 
         <!-- Logo -->
-            <h1><a href="/">{{ site.title }}</a></h1>
+            <h1><a href="/"><%- @site.title %></a></h1>
         
-        {% if page.url == "/index.html" or page.url == "/" %}
+        
+        <% if @document.url == '/index.html' : %>
         <!-- Banner -->
             <section id="banner">
                 <header>
@@ -13,7 +14,7 @@
                     <p>...and its many kingdoms!</p>
                 </header>
             </section>
-        {% endif %}
+        <% end %>
 
     </div>
 </div>

@@ -1,0 +1,27 @@
+<html>
+<%- @partial('head') %>
+
+  <body>
+
+    <%- @partial('header') %>
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <!--Content-->
+            <article class="box post">
+                <div class="image featured" style="background-image: url('<%= @document.banner %>');"></div>
+                <header>
+                    <h2><%= @document.title %></h2>
+                    <p><%= @document.shortdesc %></p>
+                </header>
+                <%- @content %>
+            </article>
+        </div>
+    </div>
+
+    <%- @partial('footer') %>
+
+  </body>
+
+</html>

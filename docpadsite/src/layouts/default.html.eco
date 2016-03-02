@@ -1,0 +1,19 @@
+<html>
+<%- @partial('head') %>
+
+  <body>
+
+    <%- @partial('header') %>
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+        <%- @content %>
+        </div>
+    </div>
+
+    <%- @partial('footer') %>
+
+  </body>
+
+</html>
