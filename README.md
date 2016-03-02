@@ -2,7 +2,7 @@
 
 This is a simple example site built using various static site generators to explore the differences between the multitude of available static site options.
 
-The initial samples are [Jekyll](http://jekyllrb.com/), [HarpJS](http://harpjs.com/), [Middleman](https://middlemanapp.com/), [Wintersmith](http://wintersmith.io/), [Hexo](http://hexo.io/) and [Hugo](http://gohugo.io/). More to come.
+The initial samples are [Jekyll](http://jekyllrb.com/), [HarpJS](http://harpjs.com/), [Middleman](https://middlemanapp.com/), [Wintersmith](http://wintersmith.io/), [Hexo](http://hexo.io/), [Hugo](http://gohugo.io/), and [DocPad](http://docpad.org/). More to come.
 
 Sample text and images are taken from the [Adventure Time! Wiki](http://adventuretime.wikia.com/wiki/Adventure_Time_with_Finn_and_Jake_Wiki).
 
@@ -54,7 +54,7 @@ The Middleman examples are built using the [Erb](http://ruby-doc.org/stdlib-2.2.
 
 ##Harp Examples
 
-Harp is available via npm. To install it, simple enter (the `sudo` is not necessary on Windows):
+Harp is available via npm. To install it, simple enter (install may require `sudo`):
 
     sudo npm install -g harp
 
@@ -70,7 +70,7 @@ By default, Harp supports both Jade and [EJS](http://www.embeddedjs.com/). A sec
 
 ##Wintersmith Example
 
-Wintersmith is also available via npm (again the `sudo` is not necessary on Windows):
+Wintersmith is also available via npm (install may require `sudo`):
 
     sudo npm install -g wintersmith
 
@@ -88,9 +88,9 @@ For a detailed walkthrough covering how the Wintersmith example site was built a
 
 ##Hexo Example
 
-Hexo is also available via npm (again the `sudo` is not necessary on Windows):
+Hexo is also available via npm (install may require `sudo`):
 
-    sudo npm install hexo-cli -g
+    npm install hexo-cli -g
 
 To run the project on a local server, simply change directory and start a preview:
 
@@ -112,3 +112,22 @@ To run the example, change directory and start a local server preview:
     hugo server
 
 Hugo templates are built with the Go html/template library. Data files are TOML.
+
+##DocPad Example
+
+DocPad is built with CoffeeScript and is available via npm (install may require `sudo`).
+
+    npm install -g docpad
+
+In order to run the example, you will need to install a number of additional dependencies as much functionality in DocPad is added via plugins. These are all specified in the package.json, so all that should be needed is:
+
+    docpad install
+
+Here's the full list of depencency installs if you choose to add them individually:
+
+    docpad install eco
+    docpad install partials
+    docpad install marked
+    docpad install rss
+
+Eco was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins. 
