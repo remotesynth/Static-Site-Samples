@@ -130,4 +130,6 @@ Here's the full list of depencency installs if you choose to add them individual
     docpad install marked
     docpad install rss
 
-[Eco](https://github.com/sstephenson/eco) was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins. 
+[Eco](https://github.com/sstephenson/eco) was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins.
+
+Data was added as YAML "front matter" to the home page as (after much research), I could not find another way to include arbitrary data on a page via an external YAML or JSON file. This is not ideal as the data cannot be reused.
