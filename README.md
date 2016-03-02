@@ -130,4 +130,4 @@ Here's the full list of depencency installs if you choose to add them individual
     docpad install marked
     docpad install rss
 
-Eco was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins. 
+[Eco](https://github.com/sstephenson/eco) was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins. 
