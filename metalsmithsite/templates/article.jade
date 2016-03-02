@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    include ./partials/head
+  body
+    include ./partials/header
+
+    div(id="main-wrapper")
+        div(class="container")
+            //Content
+            article(class="box post")
+                - var imagestyle = "background-image: url('"+banner+"');"
+                div(class="image featured",style=imagestyle)
+                header
+                    h2= title
+                    p= shortdesc
+                section.content!= typogr(contents).typogrify()
+
+    include ./partials/footer
