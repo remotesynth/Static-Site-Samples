@@ -22,6 +22,6 @@ Finn and Jake spot [Erin](http://adventuretime.wikia.com/wiki/Erin) who faint
 
 The scene changes into a leaf with a group of caterpillars with Jake hosting the marriage. Finn agrees to the marriage and everyone cheers. Suddenly, two birds are shown flying to the leaf, eating the caterpillars. Finn and Jake then changes into the birds eating the caterpillars until Finn was back into reality. Finn had caterpillars stuffed in his mouth in which he spitted them out.
 
-Back into the reality, Finn realizes the lesson of the Food Chain and sings "[Food Chain](http://adventuretime.wikia.com/wiki/Food_Chain_(song))", which PB soon joins singing with him.
+Back into the reality, Finn realizes the lesson of the Food Chain and sings "[Food Chain](http://adventuretime.wikia.com/wiki/Food_Chain_\(song\))", which PB soon joins singing with him.
 
 The end shows Finn transforming into a bird-caterpillar-plant-bacteria hybrid while the kids leave due to boredom, once again entering the slide seen in the beginning.

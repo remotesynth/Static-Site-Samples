@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  {{> head}}
+
+  <body>
+    {{> header}}
+
+    <!-- Main -->
+    <div id="main-wrapper">
+        <div class="container">
+            <!-- characters -->
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Characters -->
+                        <section>
+                            <header class="major">
+                                <h2>Characters</h2>
+                            </header>
+                            <div class="row">
+                            {{#each characters}}
+                                <div class="4u">
+                                    <section class="box">
+                                        <span class="image featured"><img src="/assets{{this.image}}" alt="" /></span>
+                                        <header>
+                                            <h3>{{this.name}}</h3>
+                                        </header>
+                                        <p>{{this.description}}</p>
+                                    </section>
+                                </div>
+                            {{/each}}
+                            </div>
+                        </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Blog -->
+                        <section>
+                            <header class="major">
+                                <h2>Recent Episodes</h2>
+                            </header>
+                            <div class="row">
+                            {{#each collections.featured }}
+                                <div class="6u">
+                                    <section class="box">
+                                        <a href="{{ path }}" class="image featured"><img src="/assets{{ banner }}" alt="" /></a>
+                                        <header>
+                                            <h3>{{ title }}</h3>
+                                            <p>Posted {{ date }}</p>
+                                        </header>
+                                        {{{ excerpt }}}</p>
+                                        <footer>
+                                            <ul class="actions">
+                                                <li><a href="{{ path }}" class="button icon fa-file-text">Continue Reading</a></li>
+                                            </ul>
+                                        </footer>
+                                    </section>
+                                </div>
+                            {{/each}}
+                            </div>
+                        </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+
+  </body>
+
+</html>

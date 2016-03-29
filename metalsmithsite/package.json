@@ -1,0 +1,35 @@
+{
+  "name": "metalsmithsite",
+  "version": "1.0.0",
+  "description": "A metalsmith example site.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "handlebars": "^4.0.5",
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-date-formatter": "^1.0.2",
+    "metalsmith-feed": "^0.2.0",
+    "metalsmith-layouts": "^1.6.4",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-more": "^0.2.0",
+    "metalsmith-page-titles": "^1.0.2",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-serve": "0.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remotesynth/Static-Site-Samples.git"
+  },
+  "author": "Brian Rinaldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remotesynth/Static-Site-Samples/issues"
+  },
+  "homepage": "https://github.com/remotesynth/Static-Site-Samples#readme"
+}
