@@ -47,7 +47,7 @@
                             {{ range first 2 .Site.Pages }}
                                 <div class="6u">
                                     <section class="box">
-                                        <a href="{{ .Permalink }}" class="image featured"><img src="{{ .Site.BaseURL }}{{ .Params.banner }}" alt="" /></a>
+                                        <a href="{{ .Permalink }}" class="image featured"><img src="{{ .Site.BaseURL }}/{{ .Params.banner }}" alt="" /></a>
                                         <header>
                                             <h3>{{ .Title }}</h3>
                                             <p>Posted {{ .Date.Format "Jan 2,2006" }}</p>
