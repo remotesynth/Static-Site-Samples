@@ -130,6 +130,19 @@ Here's the full list of depencency installs if you choose to add them individual
 
 [Eco](https://github.com/sstephenson/eco) was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins.
 
+##Wyam Example
+
+Wyam is a .NET generator written in C#. It currently runs on Windows and can be [downloaded as an installer or as binaries](https://github.com/Wyamio/Wyam/releases).
+
+To run the example, start the Wyam Command Prompt (if installed via the Windows installer), change the directory, and start the local preview server:
+
+    cd wyamsite
+    wyam -p
+
+If you downloaded and extracted the binaries without the installer, just point to the `wyam.exe` executable wherever it was extracted when you run the site.
+
+Wyam templates are built with Razor and Markdown is used for content pages with YAML front matter.
+
 ###Known Issues
 
 Data was added as YAML "front matter" to the home page as (after much research), I could not find another way to include arbitrary data on a page via an external YAML or JSON file. This is not ideal as the data cannot be reused.
