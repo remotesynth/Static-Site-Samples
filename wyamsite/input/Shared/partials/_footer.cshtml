@@ -8,16 +8,16 @@
                         <h2>More Episodes</h2>
                     </header>
                     <ul class="dates">
-                        <!-- limit 5 offset 2 -->
-                    {{ range $index, $element := .Site.Pages }}
-                        {{ if gt $index 1 }}
+                    @foreach(IDocument post in Documents["Content"]
+                        .Where(x => x.String("collection") == "episodes")
+                        .OrderByDescending(x => x.Get<DateTime>("date")))
+                    {
                         <li>
-                            <span class="date">{{ .Date.Format "Jan" }}<strong>{{ .Date.Format "2"}}</strong></span>
-                            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                            <p>{{.Description}}</p>
+                            <span class="date">@(post.Get<DateTime>("date").ToString("MMM")) <strong>@(post.Get<DateTime>("date").Day)</strong></span>
+                            <h3><a href="@Context.GetLink(post)">@post["title"]</a></h3>
+                            <p>@post["shortdesc"]</p>
                         </li>
-                        {{ end }}
-                    {{ end }}
+                    }
                     </ul>
                 </section>
             </div>
@@ -26,8 +26,8 @@
                     <header>
                         <h2>What's this all about?</h2>
                     </header>
-                    <a href="#" class="image featured"><img src="{{ .Site.BaseURL }}{{ .Site.Params.banner }}" alt="" /></a>
-                    <p>{{ .Site.Params.description }}</p>
+                    <a href="#" class="image featured"><img src="@Model["banner"]" alt="" /></a>
+                    <p>@Model["description"]</p>
                 </section>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <!-- Copyright -->
                     <div id="copyright">
                         <ul class="links">
-                            <li>&copy; {{ .Site.Title }}. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>&copy; @Model["title"]. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                         </ul>
                     </div>
 

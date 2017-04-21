@@ -1,0 +1,32 @@
+#footer-wrapper
+  section#footer.container
+    .row
+      .8u
+        section
+          header
+            h2 More Episodes
+          ul.dates
+            each post in posts.byDate().slice(2,8)
+              li
+                span.date
+                  != dateFormat(post.date, "MMM [<strong>]D[</strong>]")
+                h3
+                  a(href=post.permalink)= post.title
+                p= post.shortdesc
+      .4u
+        section
+          header
+            h2 What's this all about?
+          a.image.featured(href="#")
+            img(src= records.site.banner)
+          p= records.site.description
+    .row
+      .12u
+        #copyright
+          ul.links
+            li
+              | &copy; 
+              = records.site.name
+              |  All rights reserved.
+            li Design: 
+              a(href="http://html5up.net") HTML5 UP

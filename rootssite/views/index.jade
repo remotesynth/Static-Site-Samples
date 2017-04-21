@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  .row
+    .12u
+      section
+        header.major
+          h2 Characters
+                  
+        .row
+          - each character in records.characters.data
+            .4u
+              .box
+                span.image.featured
+                  img(src=character.image)
+                header
+                  h3= character.name
+                  p= character.description
+
+    .row
+      .12u
+        section
+          header.major
+            h2 Recent Episodes
+          div.row
+            each post in posts.byDate().slice(0,2)
+              .6u
+                section.box
+                  a.image.featured(href=post.permalink)
+                    img(src= post.banner)
+                  header
+                    h3= post.title
+                    p= "Posted " + dateFormat(post.date, 'LL')
+                    != postExcerpt(post.body, 250)
+                  footer
+                    ul.actions
+                      li
+                        a.button.icon.fa-file-text(href= post.permalink) Continue Reading
