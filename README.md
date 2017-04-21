@@ -1,5 +1,15 @@
 # Static Site Samples
 
+  * [Assumptions](#jekyll-example)
+  * [Quickstart Instructions](#quickstart-instructions)
+  * Examples
+    * [Jekyll](#jekyll-example)
+    * [Middleman](#middleman-example)
+    * [Harp](#harp-examples)
+    * [Wintersmith](#wintersmith-example)
+    * [Hexo](#hexo-example)
+    * [Hugo](#hugo-example)
+
 This is a simple example site built using various static site generators to explore the differences between the multitude of available static site options.
 
 The initial samples are [Jekyll](http://jekyllrb.com/), [HarpJS](http://harpjs.com/), [Middleman](https://middlemanapp.com/), [Wintersmith](http://wintersmith.io/), [Hexo](http://hexo.io/), [Hugo](http://gohugo.io/), [DocPad](http://docpad.org/) and [Metalsmith](http://www.metalsmith.io/). More to come.
@@ -20,6 +30,52 @@ The sample project looks the same in all cases. It was designed to cover specifi
 ##Assumptions
 
 In order to make "fair" comparisons, all of the examples are (initially) built using the default templating language. If an engine supports multiple defaults, the sample is built with the language used in the generated templates (for example, Harp supports Jade and EJS by default but the generated templates use Jade, so the initial sample was built with Jade).
+
+The "ratings" in the presentation represent my own personal opinion. Given the stylistic differences between each project, your opinion may differ greatly. For example, those comfortable with Ruby may feel that Middleman is quite easy to use (however, I am not a Ruby developer).
+
+## Quickstart Instructions
+
+If you want to save yourself time by using containers to run the examples, there is a simple `adventure-time.sh` utility that simplifies the interaction with Docker. No Docker knowledge is required. This is a great approach if you want to try out each technology without having to have anything installed on your target host (other than Docker, of course). Alternatively, you can build from scratching using the individual Dockerfiles or follow the steps for installing each technology manually 
+  * [Jekyll Example](#jekyll-example)
+  * [Middleman Example](#middleman-example)
+  * [Harp Example](#harp-examples)
+  * [Wintersmith Example](#wintersmith-example)
+  * [Hexo Example](#hexo-example)
+  * [Hugo Example](#hugo-example)
+
+The `./adventure-time.sh` utility can be used to boot one or more of the Adeventure Time static site samples immediately. The tool will:
+
+1. Use Docker to automatically download and customise the necessary container images.
+2. Use Docker to map the static site source from the target host to the container guest. This means that you can make changes directly on your host machine and they will be immediately reflected in the container guest. This is achieved by the Docker host to guest volume mapping feature and auto-reload capability of the respective static site technologies.
+
+If you need to install Docker, on most Linux operating systems you can install by simply running the following as a privileged user
+`curl -sSL https://get.docker.com/ | sh`
+For more detailed instructions visit https://docs.docker.com/engine/installation/
+
+To see the usage of the tool simply run  
+`./adventure-time.sh`
+
+To use Docker to boot a static site run  
+`sudo ./adventure-time.sh <site>`  
+For example, to run Jekyll Adventure Time example run this:  
+`sudo ./adventure-time.sh jekyll`
+
+Or if you want to boot all the static sites at the same time you can run this:  
+`sudo ./adventure-time.sh -a`
+
+![screencast](screencast.gif)
+
+By default the static sites listen on the following ports  
+
+| Site | Link |
+| ------------- | ------------- | 
+| Jekyll | http://localhost:14000 |
+| Middleman | http://localhost:14567 |
+| Harp EJS | http://localhost:19000 |
+| Harp EJS | http://localhost:29000 |
+| Wintersmith | http://localhost:28080 |
+
+If you want to run `adventure-time.sh` without sudo, simply add the current user to the docker group on your operating system. 
 
 ##Jekyll Example
 
