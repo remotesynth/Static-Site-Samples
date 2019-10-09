@@ -17,11 +17,11 @@ The sample project looks the same in all cases. It was designed to cover specifi
 
 ![sample project](sample-project.png)
 
-##Assumptions
+## Assumptions
 
 In order to make "fair" comparisons, all of the examples are (initially) built using the default templating language. If an engine supports multiple defaults, the sample is built with the language used in the generated templates (for example, Harp supports Jade and EJS by default but the generated templates use Jade, so the initial sample was built with Jade).
 
-##Jekyll Example
+## Jekyll Example
 
 To get started, you'll need to install Jekyll (no official Windows support is available but a [workaround](http://jekyllrb.com/docs/windows/#installation) is available). Jekyll is Ruby-based.
 
@@ -36,7 +36,7 @@ The Jekyll samples are built with the [Liquid template engine](https://github.co
 
 For a thorough tutorial on how to use Jekyll and how the sample site was built, read [this article on the Telerik Developer Network](http://developer.telerik.com/featured/getting-started-with-jekyll/).
 
-##Middleman Example
+## Middleman Example
 
 Middleman is also Ruby-based but does officially support Windows via [RubyInstaller](http://rubyinstaller.org/). To install Middleman, use:
 
@@ -50,7 +50,7 @@ Once you have Middleman installed, first change directory into the sample. The e
 
 The Middleman examples are built using the [Erb](http://ruby-doc.org/stdlib-2.2.0/libdoc/erb/rdoc/) templating language and YAML for the data.
 
-##Harp Examples
+## Harp Examples
 
 Harp is available via npm. To install it, simple enter (install may require `sudo`):
 
@@ -66,7 +66,7 @@ By default, Harp supports both Jade and [EJS](http://www.embeddedjs.com/). A sec
     cd harpsite_ejs
     harp server
 
-##Wintersmith Example
+## Wintersmith Example
 
 Wintersmith is also available via npm (install may require `sudo`):
 
@@ -84,7 +84,7 @@ For a detailed walkthrough covering how the Wintersmith example site was built a
 * [Getting Started with Wintersmith: A Node.js-based Static Site Generator](http://www.sitepoint.com/getting-started-wintersmith-nodejs-static-site-generator/)
 * [Creating Posts, Custom Metadata, and Data in Wintersmith](http://www.sitepoint.com/creating-posts-custom-metadata-data-wintersmith/)
 
-##Hexo Example
+## Hexo Example
 
 Hexo is also available via npm (install may require `sudo`):
 
@@ -98,7 +98,7 @@ To run the project on a local server, simply change directory and start a previe
 
 Hexo comes bundled with both EJS and Swig templating support (the generated starter uses EJS, so this was chosen). The data uses YAML.
 
-##Hugo Example
+## Hugo Example
 
 Hugo is built with the Go programming language. There are a number of OS-specific [installable downloads](https://github.com/spf13/hugo/releases) or, if you are on OSX, you can install Hugo via [Brew](http://brew.sh/):
 
@@ -111,7 +111,7 @@ To run the example, change directory and start a local server preview:
 
 Hugo templates are built with the Go html/template library. Data files are TOML.
 
-##DocPad Example
+## DocPad Example
 
 DocPad is built with CoffeeScript and is available via npm (install may require `sudo`).
 
@@ -130,7 +130,7 @@ Here's the full list of depencency installs if you choose to add them individual
 
 [Eco](https://github.com/sstephenson/eco) was chosen for the template engine since it is what the docs specify - though other templating engines are supported via additional plugins.
 
-##Wyam Example
+## Wyam Example
 
 Wyam is a .NET generator written in C#. It currently runs on Windows and can be [downloaded as an installer or as binaries](https://github.com/Wyamio/Wyam/releases).
 
@@ -143,11 +143,11 @@ If you downloaded and extracted the binaries without the installer, just point t
 
 Wyam templates are built with Razor and Markdown is used for content pages with YAML front matter.
 
-###Known Issues
+### Known Issues
 
 Data was added as YAML "front matter" to the home page as (after much research), I could not find another way to include arbitrary data on a page via an external YAML or JSON file. This is not ideal as the data cannot be reused.
 
-##Metalsmith Example
+## Metalsmith Example
 
 Metalsmith is written in JavaScript and available via npm. Metalsmith is not installed globally, so, when installing the sample, you'll simply need to add it with all other dependencies via npm (may require `sudo`).
 
@@ -171,7 +171,7 @@ Since _everything_ in Metalsmith is a plugin, there are a lot of them used. Here
 
 The templates were done in Handlebars since this is what is used in most of the examples (though the Metalsmith templates plugin supports a wide array of templating options).
 
-###Known Issues
+### Known Issues
 
 * The metalsmith-metadata plugin notes issues note [inconsistent behavior across Mac and Windows](https://github.com/segmentio/metalsmith-metadata/issues/5#issuecomment-117334325). The examples were built on a Mac.
 * The metalsmith-collections plugin [pattern matching doesn’t work when using the CLI](https://github.com/segmentio/metalsmith-collections/issues/18). As there is no way to limit the loop in Handlebars without a helper (which would have required I convert the project to use the JavaScript build file instead of the CLI), I hacked a solution by creating two separate collections. This had an important implication in that the RSS feed only lists one of the two collections (i.e. featured).
