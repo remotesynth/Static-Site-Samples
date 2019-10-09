@@ -23,7 +23,7 @@ In order to make "fair" comparisons, all of the examples are (initially) built u
 
 ##Jekyll Example
 
-To get started, you'll need to install Jekyll (no official Windows support is available but a [workaround](http://jekyllrb.com/docs/windows/#installation) is available. Jekyll is Ruby-based.
+To get started, you'll need to install Jekyll (no official Windows support is available but a [workaround](http://jekyllrb.com/docs/windows/#installation) is available). Jekyll is Ruby-based.
 
     sudo gem install jekyll
 
