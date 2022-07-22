@@ -113,11 +113,11 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     thor (0.19.1)
-    thread_safe (0.3.4)
+    thread_safe (0.3.6)
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
-    tzinfo (1.2.2)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uber (0.0.13)
     uglifier (2.7.0)
